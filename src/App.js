@@ -26,13 +26,18 @@ const App= () => {
     setquery(search)
     setsearch('')
   }
-return<div className="App">
+return<div
+
+className="App">
 <form  className="search-form " onSubmit={submithandler}>
 
 <input type='text' className="search-bar" onChange={e => setsearch(e.target.value)} value={search}/>
 <button className="search-button" type="submit">SEARCH</button>
 </form>
+<div className="recipes">
 {dishes.map((item,idx)=> <Recipe recipeList={item} key={idx}/>)} 
+
+</div>
 </div>
 }
 export default  App
